@@ -28,7 +28,6 @@ LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 LOCAL_PRIVATE_PLATFORM_APIS := true
 
 LOCAL_REQUIRED_MODULES := privapp-permissions-com.validity.fingerprint.xml
-
 include $(BUILD_PACKAGE)
 
 include $(CLEAR_VARS)
