@@ -45,7 +45,7 @@ TARGET_SCREEN_WIDTH := 1600
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.0-service \
+    android.hardware.biometrics.fingerprint@2.1-service \
     fingerprint.universal5420 \
     validityService
 
