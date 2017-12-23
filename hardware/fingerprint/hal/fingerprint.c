@@ -82,7 +82,7 @@ static int initService(vcs_fingerprint_device_t* vdev) {
 static void send_error_notice(vcs_fingerprint_device_t* vdev, fingerprint_error_t error_info) {
     ALOGV("----------------> %s ----------------->", __FUNCTION__);
 
-    fingerprint_msg_t msg = {0};
+    fingerprint_msg_t msg;
     msg.type = FINGERPRINT_ERROR;
     msg.data.error = error_info;
     ALOGI("error_info=%d", (int)error_info);
@@ -97,7 +97,7 @@ static void send_error_notice(vcs_fingerprint_device_t* vdev, fingerprint_error_
 static void send_acquired_notice(vcs_fingerprint_device_t* vdev, fingerprint_acquired_info_t acquired_info) {
     ALOGV("----------------> %s ----------------->", __FUNCTION__);
 
-    fingerprint_msg_t acqu_msg = {0};
+    fingerprint_msg_t acqu_msg;
     acqu_msg.type = FINGERPRINT_ACQUIRED;
     acqu_msg.data.acquired.acquired_info = acquired_info;
     ALOGI("acqu_info=%d", (int)acquired_info);
@@ -125,7 +125,7 @@ static void send_enroll_notice(vcs_fingerprint_device_t* vdev, int fid, int rema
 
     vdev->listener.state = STATE_SCAN;
 
-    fingerprint_msg_t msg = {0};
+    fingerprint_msg_t msg;
     msg.type = FINGERPRINT_TEMPLATE_ENROLLING;
     msg.data.enroll.finger.fid = fid;
     msg.data.enroll.samples_remaining = remaining;
@@ -141,7 +141,7 @@ static void send_authenticated_notice(vcs_fingerprint_device_t* vdev, int fid) {
 
     send_acquired_notice(vdev, FINGERPRINT_ACQUIRED_GOOD);
 
-    fingerprint_msg_t auth_msg = {0};
+    fingerprint_msg_t auth_msg;
     auth_msg.type = FINGERPRINT_AUTHENTICATED;
     auth_msg.data.authenticated.finger.fid = fid;
     auth_msg.data.authenticated.finger.gid = 0;  // unused
@@ -166,7 +166,7 @@ static void send_authenticated_notice(vcs_fingerprint_device_t* vdev, int fid) {
 static void send_remove_notice(vcs_fingerprint_device_t* vdev, int fid) {
     ALOGV("----------------> %s ----------------->fid=%d", __FUNCTION__, fid);
 
-    fingerprint_msg_t msg = {0};
+    fingerprint_msg_t msg;
     msg.type = FINGERPRINT_TEMPLATE_REMOVED;
     msg.data.removed.finger.fid = fid;
 
@@ -332,7 +332,7 @@ static int fingerprint_cancel(struct fingerprint_device *device) {
 static int fingerprint_enumerate(struct fingerprint_device *device,
         fingerprint_finger_id_t *results, uint32_t *max_size) {
     ALOGV("----------------> %s ----------------->", __FUNCTION__);
-    if (device == NULL || results == NULL || max_size == NULL) {
+    if (device == NULL) {
         ALOGE("Cannot enumerate saved fingerprints with uninitialized params");
         return -1;
     }
