@@ -1,0 +1,69 @@
+# All unpinned blobs are from T800DDU1CPH7
+# Vendor security patch level 2016-09-01
+
+# Mobicore
+app/FFFFFFFF000000000000000000000001.drbin
+app/mcRegistry/00060308060501020000000000000000.tlbin
+app/mcRegistry/02010000080300030000000000000000.tlbin
+app/mcRegistry/07010000000000000000000000000000.tlbin
+app/mcRegistry/07060000000000000000000000000000.tlbin
+app/mcRegistry/08130000000000000000000000000000.tlbin
+app/mcRegistry/ffffffff000000000000000000000003.tlbin
+app/mcRegistry/ffffffff000000000000000000000004.tlbin
+app/mcRegistry/ffffffff000000000000000000000005.tlbin
+app/mcRegistry/ffffffff000000000000000000000007.tlbin
+app/mcRegistry/ffffffff000000000000000000000008.tlbin
+app/mcRegistry/ffffffff000000000000000000000009.tlbin
+app/mcRegistry/ffffffff00000000000000000000000a.tlbin
+app/mcRegistry/ffffffff00000000000000000000000c.tlbin
+app/mcRegistry/ffffffff00000000000000000000000d.tlbin
+app/mcRegistry/ffffffff00000000000000000000000e.tlbin
+app/mcRegistry/ffffffff00000000000000000000000f.tlbin
+app/mcRegistry/ffffffff000000000000000000000010.tlbin
+app/mcRegistry/ffffffff000000000000000000000011.tlbin
+app/mcRegistry/ffffffff000000000000000000000012.tlbin
+app/mcRegistry/ffffffff000000000000000000000013.tlbin
+app/mcRegistry/ffffffff000000000000000000000017.tlbin
+app/mcRegistry/ffffffff000000000000000000000018.tlbin
+app/mcRegistry/ffffffff000000000000000000000041.tlbin
+app/mcRegistry/ffffffffd00000000000000000000004.tlbin
+app/mcRegistry/ffffffffd0000000000000000000000a.tlbin
+app/mcRegistry/ffffffffd0000000000000000000000e.tlbin
+app/mcRegistry/fffffffff0000000000000000000001e.tlbin
+
+# Fingerprint
+bin/vcsFPService
+lib/libfpasmtztransport.so
+lib/libvalAuth.so
+lib/libvcsfp.so
+lib/libvfmClient.so
+lib/libvfmtztransport.so
+
+# Samsung Exynos5 SoC series FIMC-IS driver firmware
+vendor/firmware/fimc_is_fw2_IMX134_EEPROM.bin
+vendor/firmware/setfile_6b2_eeprom.bin
+vendor/firmware/setfile_imx134_eeprom.bin
+
+# Sensors
+etc/PARAM.ini
+etc/PDC.ini
+lib/libak09911c.so
+
+# Wifi Firmware
+etc/wifi/bcmdhd_apsta.bin
+etc/wifi/bcmdhd_apsta.bin:etc/wifi/bcmdhd_apsta.bin_4354_a0|bca57d63dd766fa72727578b367b6e0c7456a2fa
+etc/wifi/bcmdhd_apsta.bin:etc/wifi/bcmdhd_apsta.bin_4354_a1|bca57d63dd766fa72727578b367b6e0c7456a2fa
+etc/wifi/bcmdhd_ibss.bin
+etc/wifi/bcmdhd_ibss.bin:etc/wifi/bcmdhd_ibss.bin_4354_a0|1468938dc7c968edf67ae3644f889d0366c2442d
+etc/wifi/bcmdhd_ibss.bin:etc/wifi/bcmdhd_ibss.bin_4354_a1|1468938dc7c968edf67ae3644f889d0366c2442d
+etc/wifi/bcmdhd_mfg.bin
+etc/wifi/bcmdhd_mfg.bin:etc/wifi/bcmdhd_mfg.bin_4354_a0|ef6a71b5f9c7022e705af686d2e2467ebf9ff006
+etc/wifi/bcmdhd_mfg.bin:etc/wifi/bcmdhd_mfg.bin_4354_a1|ef6a71b5f9c7022e705af686d2e2467ebf9ff006
+etc/wifi/bcmdhd_sta.bin
+etc/wifi/bcmdhd_sta.bin:etc/wifi/bcmdhd_sta.bin_4354_a0|603b96b883fe8f611066bcde998132d2056de11d
+etc/wifi/bcmdhd_sta.bin:etc/wifi/bcmdhd_sta.bin_4354_a1|603b96b883fe8f611066bcde998132d2056de11d
+etc/wifi/cred.conf
+etc/wifi/nvram_mfg.txt_4354_a0
+etc/wifi/nvram_mfg.txt_4354_a1
+etc/wifi/nvram_net.txt_4354_a0
+etc/wifi/nvram_net.txt_4354_a1
