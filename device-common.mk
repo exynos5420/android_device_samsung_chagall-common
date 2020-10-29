@@ -21,7 +21,6 @@ DEVICE_PATH := device/samsung/chagall-common
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    device/samsung/chagall-common/overlay/lineage-sdk \
     device/samsung/chagall-common/overlay/hardware/samsung/AdvancedDisplay
 
 # Device uses high-density artwork where available
