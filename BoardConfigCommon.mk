@@ -31,5 +31,9 @@ TARGET_SCREEN_DENSITY := 320
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
+# Legacy blobs support
+TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
+    /system/vendor/bin/vcsFPService=22
+
 # Inherit from the proprietary version
 -include vendor/samsung/chagall-common/BoardConfigVendor.mk
