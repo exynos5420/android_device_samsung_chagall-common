@@ -333,7 +333,7 @@ static int fingerprint_cancel(struct fingerprint_device *device) {
 }
 
 static int fingerprint_enumerate(struct fingerprint_device *device,
-        fingerprint_finger_id_t *results, uint32_t *max_size) {
+        __unused fingerprint_finger_id_t *results, __unused uint32_t *max_size) {
     ALOGV("----------------> %s ----------------->", __FUNCTION__);
     if (device == NULL) {
         ALOGE("Cannot enumerate saved fingerprints with uninitialized params");
@@ -358,7 +358,7 @@ static int fingerprint_enumerate(struct fingerprint_device *device,
 
 static int fingerprint_remove(struct fingerprint_device *device,
         uint32_t __unused gid, uint32_t fid) {
-    int idx = 0, ret = 0;
+    int ret = 0;
     ALOGV("----------------> %s -----------------> fid %d", __FUNCTION__, fid);
     if (device == NULL) {
         ALOGE("Can't remove fingerprint (gid=%d, fid=%d); "
@@ -505,7 +505,7 @@ static void* listenerSocket(void* data) {
 
 done:
     ALOGD("Listener exit !!");
-done_quiet:
+
     close(vdev->receive_fd);
     return NULL;
 }
@@ -565,7 +565,7 @@ static int fingerprint_open(const hw_module_t* module, const char __unused *id,
     vdev->device.set_active_group = fingerprint_set_active_group;
     vdev->device.authenticate = fingerprint_authenticate;
     vdev->device.cancel = fingerprint_cancel;
-    vdev->device.enumerate = fingerprint_enumerate;
+    vdev->device.enumerate = (int (*)(struct fingerprint_device *))fingerprint_enumerate;
     vdev->device.remove = fingerprint_remove;
     vdev->device.set_notify = set_notify_callback;
     vdev->device.notify = NULL;
