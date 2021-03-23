@@ -1,5 +1,5 @@
-# All unpinned blobs are from T800DDU1CPH7
-# Vendor security patch level 2016-09-01
+# All unpinned blobs are from T800XXU1CRJ1
+# Vendor security patch level 2017-08-01
 
 # Mobicore
 app/FFFFFFFF000000000000000000000001.drbin:vendor/app/FFFFFFFF000000000000000000000001.drbin
