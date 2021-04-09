@@ -36,4 +36,4 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /system/vendor/bin/vcsFPService=22
 
 # Inherit from the proprietary version
--include vendor/samsung/chagall-common/BoardConfigVendor.mk
+include vendor/samsung/chagall-common/BoardConfigVendor.mk

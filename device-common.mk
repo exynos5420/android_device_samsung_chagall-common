@@ -75,4 +75,4 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_k.mk)
 $(call inherit-product, device/samsung/universal5420-common/device-common.mk)
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/samsung/chagall-common/chagall-common-vendor.mk)
+$(call inherit-product, vendor/samsung/chagall-common/chagall-common-vendor.mk)
