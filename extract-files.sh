@@ -53,4 +53,17 @@ setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC"
 
-"$MY_DIR"/setup-makefiles.sh
+# Fix proprietary blobs
+BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE_COMMON"/proprietary
+
+# nvram_mfg.txt
+sed -i 's|ccode=ALL|ccode=00|g' $BLOB_ROOT/etc/wifi/nvram_mfg.txt_4354_a0
+sed -i 's|regrev=0|regrev=6|g' $BLOB_ROOT/etc/wifi/nvram_mfg.txt_4354_a0
+sed -i 's|ccode=ALL|ccode=00|g' $BLOB_ROOT/etc/wifi/nvram_mfg.txt_4354_a1
+sed -i 's|regrev=0|regrev=6|g' $BLOB_ROOT/etc/wifi/nvram_mfg.txt_4354_a1
+
+# nvram_net.txt
+sed -i 's|ccode=GB|ccode=00|g' $BLOB_ROOT/etc/wifi/nvram_net.txt_4354_a0
+sed -i 's|ccode=GB|ccode=00|g' $BLOB_ROOT/etc/wifi/nvram_net.txt_4354_a1
+
+"${MY_DIR}"/setup-makefiles.sh
