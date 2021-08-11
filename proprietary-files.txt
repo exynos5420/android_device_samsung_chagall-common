@@ -51,19 +51,19 @@ lib/libak09911c.so:vendor/lib/libak09911c.so
 
 # Wifi Firmware
 etc/wifi/bcmdhd_apsta.bin
-etc/wifi/bcmdhd_apsta.bin:etc/wifi/bcmdhd_apsta.bin_4354_a0|bca57d63dd766fa72727578b367b6e0c7456a2fa
-etc/wifi/bcmdhd_apsta.bin:etc/wifi/bcmdhd_apsta.bin_4354_a1|bca57d63dd766fa72727578b367b6e0c7456a2fa
+etc/wifi/bcmdhd_apsta.bin:etc/wifi/bcmdhd_apsta.bin_4354_a0|4e151f8ed8e8210f83270dc30c980e74e6507ccc
+etc/wifi/bcmdhd_apsta.bin:etc/wifi/bcmdhd_apsta.bin_4354_a1|4e151f8ed8e8210f83270dc30c980e74e6507ccc
 etc/wifi/bcmdhd_ibss.bin
 etc/wifi/bcmdhd_ibss.bin:etc/wifi/bcmdhd_ibss.bin_4354_a0|1468938dc7c968edf67ae3644f889d0366c2442d
 etc/wifi/bcmdhd_ibss.bin:etc/wifi/bcmdhd_ibss.bin_4354_a1|1468938dc7c968edf67ae3644f889d0366c2442d
 etc/wifi/bcmdhd_mfg.bin
-etc/wifi/bcmdhd_mfg.bin:etc/wifi/bcmdhd_mfg.bin_4354_a0|ef6a71b5f9c7022e705af686d2e2467ebf9ff006
-etc/wifi/bcmdhd_mfg.bin:etc/wifi/bcmdhd_mfg.bin_4354_a1|ef6a71b5f9c7022e705af686d2e2467ebf9ff006
+etc/wifi/bcmdhd_mfg.bin:etc/wifi/bcmdhd_mfg.bin_4354_a0|86ab2e8173752b8be034644a10117c883d5ffd97
+etc/wifi/bcmdhd_mfg.bin:etc/wifi/bcmdhd_mfg.bin_4354_a1|86ab2e8173752b8be034644a10117c883d5ffd97
 etc/wifi/bcmdhd_sta.bin
-etc/wifi/bcmdhd_sta.bin:etc/wifi/bcmdhd_sta.bin_4354_a0|603b96b883fe8f611066bcde998132d2056de11d
-etc/wifi/bcmdhd_sta.bin:etc/wifi/bcmdhd_sta.bin_4354_a1|603b96b883fe8f611066bcde998132d2056de11d
+etc/wifi/bcmdhd_sta.bin:etc/wifi/bcmdhd_sta.bin_4354_a0|71469632aa7b8e525de9bbddc98af8a6ea582bef
+etc/wifi/bcmdhd_sta.bin:etc/wifi/bcmdhd_sta.bin_4354_a1|71469632aa7b8e525de9bbddc98af8a6ea582bef
 etc/wifi/cred.conf
 etc/wifi/nvram_mfg.txt_4354_a0
-etc/wifi/nvram_mfg.txt_4354_a1
+etc/wifi/nvram_mfg.txt_4354_a0:etc/wifi/bcmdhd_sta.bin_4354_a1|a4768950263f0e4759f3147d35062908a48ea3d1
 etc/wifi/nvram_net.txt_4354_a0
-etc/wifi/nvram_net.txt_4354_a1
+etc/wifi/nvram_net.txt_4354_a0:etc/wifi/bcmdhd_sta.bin_4354_a1|08acaf28c20c754b429f0e173ea8c41c40f813e5
