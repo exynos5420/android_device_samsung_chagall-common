@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "83d06627_6b566737",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 3
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1000001
+      },
+      "writtenOn": "2021-08-13T01:11:28Z",
+      "side": 1,
+      "message": "This does not match the pinned blob. Same with the other.",
+      "range": {
+        "startLine": 67,
+        "startChar": 40,
+        "endLine": 67,
+        "endChar": 62
+      },
+      "revId": "f8f306aa94b5a855f26f122c34af88098d8f9934",
+      "serverId": "c6d92919-bfe7-411c-9f64-004a8163e0f0",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "925da7f0_527e957c",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 3
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1000001
+      },
+      "writtenOn": "2021-08-13T01:11:28Z",
+      "side": 1,
+      "message": "This does not match the pinned blob. Same with the other.",
+      "range": {
+        "startLine": 69,
+        "startChar": 40,
+        "endLine": 69,
+        "endChar": 62
+      },
+      "revId": "f8f306aa94b5a855f26f122c34af88098d8f9934",
+      "serverId": "c6d92919-bfe7-411c-9f64-004a8163e0f0",
+      "unresolved": true
+    }
+  ]
+}
