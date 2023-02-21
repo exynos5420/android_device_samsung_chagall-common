@@ -1,18 +1,16 @@
 #!/bin/bash
 #
-# Copyright (C) 2017-2021 The LineageOS Project
+# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2017-2020 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 set -e
 
-DEVICE_COMMON=chagall-common
-VENDOR=samsung
-
-# Load extractutils and do some sanity checks
+# Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
-if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
+if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
 ANDROID_ROOT="${MY_DIR}/../../.."
 
@@ -23,13 +21,28 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
-# Initialize the helper
+# Initialize the helper for common
 setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true
 
 # Warning headers and guards
 write_headers "chagalllte chagallltetmo chagallwifi"
 
-write_makefiles "$MY_DIR"/proprietary-files.txt true
+# The standard common blobs
+write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
-# Done
+# Finish
 write_footers
+
+if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
+    # Reinitialize the helper for device
+    setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false
+
+    # Warning headers and guards
+    write_headers
+
+    # The standard device blobs
+    write_makefiles "${MY_DIR}/../${DEVICE}/proprietary-files.txt" true
+
+    # Finish
+    write_footers
+fi
