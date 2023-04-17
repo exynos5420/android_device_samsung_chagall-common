@@ -23,7 +23,6 @@
     <ctl name="HPOUT1 Digital Switch" value="1" />
     <ctl name="HPOUT2L Input 1" value="AIF1RX1" />
     <ctl name="HPOUT2R Input 1" value="AIF1RX2" />
-    <ctl name="OUT2 Digital Switch" value="1" />
     <ctl name="ASRC2L Input" value="AIF2RX1" />
     <ctl name="ASRC2R Input" value="AIF2RX2" />
     <ctl name="EPOUT Input 3" value="None" />
@@ -136,8 +135,11 @@
         <ctl name="ASRC1R Input" value="AIF1RX2" />
     </path>
 
-    <path name="verb-normal">
+    <path name="AIF2Master">
         <ctl name="AIF2 Mode" value="Master" />
+    </path>
+
+    <path name="verb-normal">
         <ctl name="EPOUT DRE Switch" value="1" />
         <ctl name="HPOUT1 DRE Switch" value="1" />
         <ctl name="EPOUT Input 3" value="None" />
@@ -222,21 +224,24 @@
 
     <path name="earpiece">
         <path name="verb-normal" />
+        <path name="AIF2Master" />
         <ctl name="RCV Switch" value="1" />
         <ctl name="EPOUT Digital Volume" value="108" />
         <ctl name="EPOUT Input 1 Volume" value="32" />
         <ctl name="EPOUT Input 2 Volume" value="32" />
     </path>
-
+ 
     <path name="speaker">
+        <path name="AIF2Master" />
         <path name="verb-normal" />
         <ctl name="SPK Switch" value="1" />
         <ctl name="Speaker Digital Volume" value="125" />
-        <ctl name="SPKOUTL Input 1 Volume" value="39" />
+        <ctl name="SPKOUTL Input 1 Volume" value="42" />
         <ctl name="SPKOUTR Input 1 Volume" value="42" />
     </path>
 
     <path name="headphones">
+        <path name="AIF2Master" />
         <path name="verb-normal" />
         <ctl name="Output Compensation Switch" value="1" />
         <ctl name="HP Switch" value="1" />
@@ -252,6 +257,7 @@
     </path>
 
     <path name="bt-sco-headset">
+        <path name="AIF2Master" />
         <path name="verb-normal" />
         <ctl name="ASRC1L Input" value="AIF1RX1" />
         <ctl name="ASRC1R Input" value="AIF1RX2" />
